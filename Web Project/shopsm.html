@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="stylessm.css" />
+    <script src="functionsm.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <center>Cart</center>
+        </h1>
+        <img src="./Images/Conestoga Market-logos.jpeg" />
+    </header>
+    <main>
+
+        <p>Scroll Down for Invoice</p>
+        <form id="customerdetails" onsubmit="return generateInvoice()">
+
+            <label for="fname">Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Name" required /><br />
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="Phone" placeholder="(xxx)-xxx-xxxx" required /><br />
+
+            <label for="province">Province:</label>
+            <select id="province" name="province">
+                <option value="Ontario">Ontario</option>
+                <option value="Quebec">Quebec</option>
+                <option value="NovaScotia">Nova Scotia</option>
+                <option value="NBrunswick">New Brunswick</option>
+                <option value="Manitoba">Manitoba</option>
+                <option value="BC">British Columbia</option>
+                <option value="PEI">Prince Edward Island</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="AB">Alberta</option>
+                <option value="NAL">Newfoundland and Labrador</option>
+            </select><br>
+
+
+
+            <label for="phone">Number of T-Shirt <b>($10):</b></label>
+            <input type="number" id="tshirt" name="T-Shirt" min="0"/><br />  
+
+            <!--Removing the minimum = 0, because we are doing the validation check in JS (Doing it for Exam Requirement Purpose)-->
+
+
+            <label for="jackets">Number of Jacket <b>($25):</b></label>
+            <input type="number" id="jackets" name="Jackets" /><br />
+
+            <label for="caps">Number of Caps <b>($5):</b></label>
+            <input type="number" id="cap" name="Caps"/><br />
+
+            <button id = "generate">Generate Invoice </button>
+        </form>
+    </main>
+
+    <div id="invoice"></div>
+</body>
+
+</html>
